@@ -11,7 +11,8 @@ my $webhook_url = 'https://discord.com/api/webhooks/1062339671415341116/868ZyYHu
 
 my $options = {
     headers => { 'Content-Type' => 'application/json'},
-    content => JSON::PP->new()->encode({ content => 'Hello from Webhook' }),
+    # content => JSON::PP->new()->encode({ content => 'こんにちは!' }),
+    content => JSON::PP->new()->encode({ content => 'Perl Entrance :+1:' }),
 };
 
 my $response = HTTP::Tiny->new()->post( $webhook_url, $options );
